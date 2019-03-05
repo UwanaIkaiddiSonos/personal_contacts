@@ -1,13 +1,23 @@
 class Api::PersonalContactsController < ApplicationController
   
-  def get
-    render 'get.json.jbuilder'
+  def index
+    render 'index.json.jbuilder'
+  end
+
+  def show
+    render 'show.json.jbuilder'
   end
 
   def create
     render 'create.json.jbuilder'
   end
 
-  def 
+  def update
+    render 'update.json.jbuilder'
+  end
+
+  def destroy
+    render 'destroy.json.jbuilder'
+  end
 
 end
