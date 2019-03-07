@@ -1,5 +1,4 @@
 class Contact < ApplicationRecord
-  def test_method
-    return "hello"
-  end
+  validates :first_name, presence: true
+  validates :first_name, uniqueness: true
 end
