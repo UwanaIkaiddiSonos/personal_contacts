@@ -9,8 +9,8 @@ class Api::PersonalContactsController < ApplicationController
       @contacts = Contact.all
     end
 
-    order_search = params[:order]
-    @contacts= @contatcs.order(:last_name => order_search)
+    # order_search = params[:order]
+    # @contacts= @contatcs.order(:last_name => order_search)
 
     render 'index.json.jbuilder'
   end
@@ -27,7 +27,8 @@ class Api::PersonalContactsController < ApplicationController
       last_name: params[:input_last_name],
       email: params[:input_email],
       phone_number: params[:input_phone_number],
-      bio: params[:input_bio]
+      bio: params[:input_bio],
+      department: params[:input_department_id]
     )
 
     if @contact.save
