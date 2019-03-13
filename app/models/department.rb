@@ -1,5 +1,6 @@
 class Department < ApplicationRecord
-  def contacts
-    Contacts.where(department_id: id)
-  end
+  has_many :contacts
+  # def contacts
+  #   Contacts.where(department_id: id)
+  # end
 end

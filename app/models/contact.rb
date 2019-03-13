@@ -5,4 +5,6 @@ class Contact < ApplicationRecord
   validates :email, uniqueness: true
   #Email must be in proper format
   #
+  has_many :images
+  belongs_to :departments
 end
