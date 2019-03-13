@@ -12,5 +12,8 @@ Rails.application.routes.draw do
     post 'post_url' => 'personal_contacts#create'
     patch 'patch_url/:id' => 'personal_contacts#update'
     delete 'destroy_url/:id' => 'personal_contacts#destroy'
+
+    post "/users" => 'users#create'
+    post "/sessions" => 'sessions#create'
   end
 end
