@@ -5,8 +5,9 @@ class Contact < ApplicationRecord
   # validates :email, uniqueness: true
   #Email must be in proper format
   #
-  has_many :images
-  belongs_to :departments
-  belongs_to :users
-  has_many :orders
+  # has_many :images
+  # belongs_to :departments
+  # belongs_to :users
+  # has_many :orders
+  has_many :groups, through: :contact_groups
 end
