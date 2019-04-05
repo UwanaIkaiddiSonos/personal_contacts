@@ -2,12 +2,12 @@ class Api::PersonalContactsController < ApplicationController
   
   def index
     @contacts = Contact.all
-    search_term = params[:search]
-    if search_term
-      @contacts = Contact.where("first_name iLIKE ?", "%#{search_term}%")
-    else
-      @contacts = Contact.all
-    end
+    # search_term = params[:search]
+    # if search_term
+    #   @contacts = Contact.where("first_name iLIKE ?", "%#{search_term}%")
+    # else
+    #   @contacts = Contact.all
+    # end
 
     # order_search = params[:order]
     # @contacts= @contatcs.order(:last_name => order_search)
